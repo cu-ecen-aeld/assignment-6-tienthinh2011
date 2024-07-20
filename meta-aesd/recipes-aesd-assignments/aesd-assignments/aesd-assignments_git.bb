@@ -53,6 +53,8 @@ do_install () {
 
 	# Add initscript
 	# Install the init script
-    	install -d ${D}${sysconfdir}/init.d
-    	install -m 0755 ${S}/${INITSCRIPT_NAME} ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME}
+	install -d ${D}${sysconfdir}/init.d
+	install -m 0755 ${S}/${INITSCRIPT_NAME} ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME}
+	install -d ${D}${sysconfdir}/rc5.d
+	install -m 0755 ${S}/${INITSCRIPT_NAME} ${D}${sysconfdir}/rc5.d/S99aesdsocket
 }
